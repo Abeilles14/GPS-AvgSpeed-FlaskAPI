@@ -1,3 +1,3 @@
-# UAS-Coding-Challenge-2020
+# GPS Average and Instantaneous Speed Calculation
 
-UAS Coding Challenge 2020 - #2 GPS Speed Challenge (B-GPS-0)
+Python Flask REST API and calculation of UTM GPS coordinates
