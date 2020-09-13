@@ -17,6 +17,7 @@ else:
 
 # number of coords
 lines = len(coord_list)
+line_count = 1;
 
 is_first_coord = True
 
@@ -49,12 +50,13 @@ for coord in coord_list:
     northing_displacement = current_northing_utm - original_northing_utm
 
     # average speed: sqrt(d1^2 +d2^2)/t, t = 1 sec
-    avg_speed = round(math.sqrt((easting_displacement**2 + northing_displacement**2)), 4)
+    avg_speed = round(math.sqrt((easting_displacement**2 + northing_displacement**2)) / line_count, 4)
 
     print("utm coord: {}, inst speed: {}, avg speed: {}".format(utm_coord, inst_speed, avg_speed))
 
     last_easting_utm = current_easting_utm
-    last_northing_utm = current_easting_utm
+    last_northing_utm = current_northing_utm
+
+    line_count += 1;
 
     time.sleep(1)
-
